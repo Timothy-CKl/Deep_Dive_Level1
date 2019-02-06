@@ -11,8 +11,14 @@ if ($soort == "+" || $soort == "-" ) {
     if (is_numeric($getal1)) {
         $getal2 = readline("Tweede getal?  ");
         if (is_numeric($getal2)) {
-            $totaal = (int)$getal1 + $soort + (int)$getal2;
-            echo "Het antwoord is $totaal";
+            if($soort == "+"){
+                $totaal = (int)$getal1 + (int)$getal2;
+                echo "Het antwoord is $totaal";
+            }
+            elseif($soort == "-"){
+                $totaal = (int)$getal1 - (int)$getal2;
+                echo "Het antwoord is $totaal";
+            }
         }
         else{
             echo "dit is geen goed getal";
